@@ -1,16 +1,47 @@
 [gd_scene format=3 uid="uid://b6i6t4yxstbxx"]
 
+[ext_resource type="Texture2D" uid="uid://ildk5416c3j2" path="res://assets/blue2.png" id="1_3ptll"]
 [ext_resource type="Script" uid="uid://m0dtcjatojhy" path="res://scenes/cutscene.gd" id="1_a320b"]
+[ext_resource type="Texture2D" uid="uid://dpiyqwyur4evc" path="res://assets/cutscene/frame0.png" id="1_bb0yx"]
 [ext_resource type="Texture2D" uid="uid://ccvncbr846kug" path="res://assets/blue.png" id="2_0sipp"]
+[ext_resource type="Texture2D" uid="uid://dv202qot0y0nt" path="res://assets/cutscene/frame1.png" id="2_3ptll"]
 [ext_resource type="Script" uid="uid://crj0yw2q88o2d" path="res://scenes/fade.gd" id="3_0sipp"]
+[ext_resource type="Texture2D" uid="uid://b38n64xbmqlfa" path="res://assets/cutscene/frame2.png" id="3_d18fx"]
 
-[node name="cutscene" unique_id=1270152204]
+[sub_resource type="SpriteFrames" id="SpriteFrames_dpuov"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3ptll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_bb0yx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3ptll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_d18fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_3ptll")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 0.4
+}]
 
-[node name="AnimatedSprite2D" parent="." index="0" unique_id=2022119903]
-frame_progress = 0.62906414
+[node name="cutscene" type="Node2D" unique_id=1270152204]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2022119903]
+scale = Vector2(0.2950819, 0.295082)
+sprite_frames = SubResource("SpriteFrames_dpuov")
+autoplay = "default"
+frame_progress = 0.5392333
 script = ExtResource("1_a320b")
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=2118102783]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2118102783]
+visible = false
 z_index = -1
 texture = ExtResource("2_0sipp")
 script = ExtResource("3_0sipp")

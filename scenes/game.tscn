@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://4luq7gt0m5uo" path="res://scenes/endscreen.gd" id="7_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://c6t5w1rdqliwv" path="res://assets/pressstart.png" id="8_gee14"]
 [ext_resource type="Script" uid="uid://ct132hygx4ngd" path="res://scenes/debris.gd" id="9_vtaks"]
+[ext_resource type="PackedScene" uid="uid://b6i6t4yxstbxx" path="res://scenes/cutscene.tscn" id="10_vtaks"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dtx53"]
 distance = -3.0
@@ -90,3 +91,7 @@ texture = ExtResource("2_yqjtg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="debris/damage" unique_id=1891317242]
 position = Vector2(-22, -55)
 shape = SubResource("RectangleShape2D_dtx53")
+
+[node name="cutscene" parent="." unique_id=1270152204 instance=ExtResource("10_vtaks")]
+z_index = 3
+position = Vector2(0, -12)
