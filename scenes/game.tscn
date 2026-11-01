@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cmathr2hqide5"]
 
 [ext_resource type="PackedScene" uid="uid://cdag1xqssypo" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="Texture2D" uid="uid://xmobrxl1vqug" path="res://assets/background.png" id="2_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://cvym3bleuw77d" path="res://icon.svg" id="2_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://xmobrxl1vqug" path="res://assets/background.png" id="3_lnu2h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dtx53"]
 distance = -3.0
@@ -14,6 +15,9 @@ normal = Vector2(1, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_slfft"]
 normal = Vector2(-1, 0)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1bkr4"]
+height = 42.0
 
 [node name="game" type="Node2D" unique_id=478730700]
 
@@ -42,8 +46,19 @@ shape = SubResource("WorldBoundaryShape2D_632h5")
 position = Vector2(219, -5)
 shape = SubResource("WorldBoundaryShape2D_slfft")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2068157853]
-z_index = -3
-position = Vector2(0, -10.999999)
-scale = Vector2(0.3, 0.3)
+[node name="pill-ar" type="Area2D" parent="." unique_id=1448842773]
+
+[node name="Sprite2D" type="Sprite2D" parent="pill-ar" unique_id=777296903]
+position = Vector2(72, -59)
+scale = Vector2(0.203125, 0.3515625)
 texture = ExtResource("2_yqjtg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pill-ar" unique_id=1386994285]
+position = Vector2(72, -59)
+shape = SubResource("CapsuleShape2D_1bkr4")
+
+[node name="background" type="Sprite2D" parent="." unique_id=728793159]
+z_index = -4
+position = Vector2(0.99999994, -11.999998)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_lnu2h")

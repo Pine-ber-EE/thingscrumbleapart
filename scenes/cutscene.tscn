@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b6i6t4yxstbxx"]
+
+[ext_resource type="Script" uid="uid://m0dtcjatojhy" path="res://scenes/cutscene.gd" id="1_a320b"]
+[ext_resource type="Texture2D" uid="uid://ccvncbr846kug" path="res://assets/blue.png" id="2_0sipp"]
+[ext_resource type="Script" uid="uid://crj0yw2q88o2d" path="res://scenes/fade.gd" id="3_0sipp"]
+
+[node name="cutscene" unique_id=1270152204]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=2022119903]
+frame_progress = 0.62906414
+script = ExtResource("1_a320b")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=2118102783]
+z_index = -1
+texture = ExtResource("2_0sipp")
+script = ExtResource("3_0sipp")

@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cmivq30p50sn3"]
+
+[node name="damage" type="Area2D" unique_id=74082055]
