@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://cmathr2hqide5"]
 
+[ext_resource type="Script" uid="uid://dipw4hfjuh1ri" path="res://scenes/game.gd" id="1_iywne"]
 [ext_resource type="PackedScene" uid="uid://cdag1xqssypo" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://cvym3bleuw77d" path="res://icon.svg" id="2_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://xmobrxl1vqug" path="res://assets/background.png" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://cmivq30p50sn3" path="res://scenes/damage.tscn" id="4_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://ccvncbr846kug" path="res://assets/blue.png" id="6_p57ef"]
+[ext_resource type="Script" uid="uid://4luq7gt0m5uo" path="res://scenes/endscreen.gd" id="7_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://c6t5w1rdqliwv" path="res://assets/pressstart.png" id="8_gee14"]
+[ext_resource type="Script" uid="uid://ct132hygx4ngd" path="res://scenes/debris.gd" id="9_vtaks"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dtx53"]
 distance = -3.0
@@ -16,10 +22,13 @@ normal = Vector2(1, 0)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_slfft"]
 normal = Vector2(-1, 0)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1bkr4"]
-height = 42.0
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tebq6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtx53"]
+size = Vector2(10, 20)
 
 [node name="game" type="Node2D" unique_id=478730700]
+script = ExtResource("1_iywne")
 
 [node name="player" parent="." unique_id=1994481336 instance=ExtResource("1_uwrxv")]
 position = Vector2(-1, -2)
@@ -46,19 +55,38 @@ shape = SubResource("WorldBoundaryShape2D_632h5")
 position = Vector2(219, -5)
 shape = SubResource("WorldBoundaryShape2D_slfft")
 
-[node name="pill-ar" type="Area2D" parent="." unique_id=1448842773]
-
-[node name="Sprite2D" type="Sprite2D" parent="pill-ar" unique_id=777296903]
-position = Vector2(72, -59)
-scale = Vector2(0.203125, 0.3515625)
-texture = ExtResource("2_yqjtg")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="pill-ar" unique_id=1386994285]
-position = Vector2(72, -59)
-shape = SubResource("CapsuleShape2D_1bkr4")
-
 [node name="background" type="Sprite2D" parent="." unique_id=728793159]
 z_index = -4
 position = Vector2(0.99999994, -11.999998)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_lnu2h")
+
+[node name="damage" parent="." unique_id=74082055 instance=ExtResource("4_lbhrr")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damage" unique_id=1117646196]
+position = Vector2(1, 75)
+shape = SubResource("WorldBoundaryShape2D_tebq6")
+
+[node name="endscreen" type="Sprite2D" parent="." unique_id=1365837861]
+texture = ExtResource("6_p57ef")
+script = ExtResource("7_u5sy4")
+
+[node name="pressspace" type="Sprite2D" parent="." unique_id=62613485]
+position = Vector2(-3.0000005, -57)
+scale = Vector2(0.19495414, 0.18484041)
+texture = ExtResource("8_gee14")
+
+[node name="debris" type="CharacterBody2D" parent="." unique_id=540075149]
+position = Vector2(86, -9)
+script = ExtResource("9_vtaks")
+
+[node name="Sprite2D" type="Sprite2D" parent="debris" unique_id=205574985]
+position = Vector2(-22, -55)
+scale = Vector2(0.09375, 0.2109375)
+texture = ExtResource("2_yqjtg")
+
+[node name="damage" parent="debris" unique_id=1588641404 instance=ExtResource("4_lbhrr")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="debris/damage" unique_id=1891317242]
+position = Vector2(-22, -55)
+shape = SubResource("RectangleShape2D_dtx53")

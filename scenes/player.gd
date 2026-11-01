@@ -1,17 +1,22 @@
 extends CharacterBody2D
 
-
+var jumps = 0
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
 
-
 func _physics_process(delta: float) -> void:
+	if (jumps == 0):
+		modulate.a = 0.5
+	else:
+		modulate.a = 1
 	# Add the gravity.
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		if not (jumps == 0):
+			velocity += get_gravity() * delta
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept"):
+		jumps+=1
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
