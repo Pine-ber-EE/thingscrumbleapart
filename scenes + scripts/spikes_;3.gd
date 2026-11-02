@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 	if(position.y > 1000):
 		if(cut == 1):
 			if(start == 1):
-				if(timer > 5):
+				if(timer > randi_range(4,6)):
 					velocity.y=0
 					respawn()
 					timer = 0

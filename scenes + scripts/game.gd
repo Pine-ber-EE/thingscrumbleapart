@@ -7,9 +7,9 @@ var active2 = 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$cutscene.visible = true
-	$damage.bob.connect(end_game)
-	$debris/damage.bob.connect(end_game)
-	$"spikes ;3"/damage.bob.connect(end_game)
+	$damage.damage.connect(end_game)
+	$debris/damage.damage.connect(end_game)
+	$"spikes ;3"/damage.damage.connect(end_game)
 	$cutscene/AnimatedSprite2D.bob2.connect(cutscene_end)
 	$player.bob.connect(start)
 
