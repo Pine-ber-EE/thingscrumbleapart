@@ -1,4 +1,4 @@
-# thingscrumbleapart
+# things crumble apart
 This was my first godot game, so a ton of time was spent figuring things out, debugging, and watching yt tutorials.
 
 ## instructions

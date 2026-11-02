@@ -34,6 +34,7 @@ func cutscene_end():
 	$"spikes ;3".cut = 1
 	$player.cut=1
 	$cutscene/Sprite2D.visible = false
+	$cutscene/Label.visible = false
 
 func start():
 	$debris.start = 1

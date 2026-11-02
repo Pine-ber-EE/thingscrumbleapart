@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://b38n64xbmqlfa" path="res://assets/cutscene/frame2.png" id="13_264po"]
 [ext_resource type="Script" uid="uid://m0dtcjatojhy" path="res://scenes + scripts/cutscene.gd" id="14_1kice"]
 [ext_resource type="Texture2D" uid="uid://b7miigxtts5c4" path="res://assets/cutscene/frame3.png" id="14_rysoc"]
+[ext_resource type="FontFile" uid="uid://vbohpsiv0fre" path="res://assets/JellyBounce.ttf" id="20_0uc5v"]
 [ext_resource type="Script" uid="uid://d523sst2b7mq" path="res://scenes + scripts/spikes_;3.gd" id="20_1kice"]
 [ext_resource type="PackedScene" uid="uid://cgmhfdiyhd4lu" path="res://scenes + scripts/score.tscn" id="21_5newe"]
 
@@ -39,6 +40,11 @@ normal = Vector2(-1, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dtx53"]
 size = Vector2(10.375, 37.5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dtx53"]
+font = ExtResource("20_0uc5v")
+font_size = 20
+font_color = Color(0.078431375, 0.06666667, 0.28627452, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dpuov"]
 animations = [{
@@ -198,7 +204,6 @@ texture = ExtResource("5_vtaks")
 script = ExtResource("7_u5sy4")
 
 [node name="pressspace" type="Sprite2D" parent="." unique_id=62613485]
-visible = false
 position = Vector2(-3.0000005, -57)
 scale = Vector2(0.19495414, 0.18484041)
 texture = ExtResource("8_gee14")
@@ -219,9 +224,18 @@ position = Vector2(6, -101)
 shape = SubResource("RectangleShape2D_dtx53")
 
 [node name="cutscene" type="Node2D" parent="." unique_id=1270152204]
-visible = false
 z_index = 8
 position = Vector2(0, -12)
+
+[node name="Label" type="Label" parent="cutscene" unique_id=1417468967]
+z_index = 11
+offset_left = 119.0
+offset_top = 88.0
+offset_right = 597.0
+offset_bottom = 168.0
+scale = Vector2(0.5, 0.5)
+text = "click s to skip"
+label_settings = SubResource("LabelSettings_dtx53")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="cutscene" unique_id=2022119903]
 scale = Vector2(0.2950819, 0.295082)

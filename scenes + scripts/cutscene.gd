@@ -10,6 +10,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_skip"):
+		emit_signal("bob2")
+		visible = false
 	timer += delta * 0.4
 	frame = round(timer)
 	modulate.a = fmod(timer+0.5,1)+0.3
