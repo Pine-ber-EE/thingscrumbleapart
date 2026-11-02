@@ -3,7 +3,7 @@ extends CharacterBody2D
 signal bob
 var jumps = 0
 const SPEED = 150.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -200.0
 var cut = 0
 
 func _physics_process(delta: float) -> void:
@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		if not (jumps == 0):
-			velocity += get_gravity() * delta
+			velocity += get_gravity() * delta * 0.6
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept"):

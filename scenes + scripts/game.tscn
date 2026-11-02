@@ -166,13 +166,13 @@ scale = Vector2(1.0986482, 0.90102136)
 texture = ExtResource("9_ca42v")
 
 [node name="Sprite2D10" type="Sprite2D" parent="background/decor" unique_id=194862093]
-position = Vector2(439.01648, 2283.1838)
+position = Vector2(446.21426, 2225.7625)
 rotation = 1.0152643
 scale = Vector2(0.45962283, 0.4045418)
 texture = ExtResource("9_ca42v")
 
 [node name="Sprite2D9" type="Sprite2D" parent="background/decor" unique_id=660001541]
-position = Vector2(442.36136, 2370.965)
+position = Vector2(439.08948, 2329.829)
 rotation = 1.5372798
 scale = Vector2(0.46863133, 0.5305072)
 texture = ExtResource("5_ssvqc")
@@ -180,7 +180,7 @@ texture = ExtResource("5_ssvqc")
 [node name="damage" parent="." unique_id=74082055 instance=ExtResource("4_lbhrr")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="damage" unique_id=1117646196]
-position = Vector2(1, 75)
+position = Vector2(1, 83)
 shape = SubResource("WorldBoundaryShape2D_tebq6")
 
 [node name="endscreen" type="Sprite2D" parent="." unique_id=1365837861]
