@@ -25,6 +25,6 @@ func _physics_process(delta: float) -> void:
 func respawn():
 	rotation = 0
 	position.y=-50
-	position.x = 5#randi_range(-180,220)
-	#rotate(deg_to_rad(randi_range(-40, 50)))
+	position.x = randi_range(-180,220)
+	rotate(deg_to_rad(randi_range(-40, 50)))
 	position.y=-100

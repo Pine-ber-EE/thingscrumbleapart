@@ -4,6 +4,7 @@ extends Node2D
 func _ready() -> void:
 	$damage.bob.connect(end_game)
 	$debris/damage.bob.connect(end_game)
+	$"spikes ;3"/damage.bob.connect(end_game)
 	$cutscene/AnimatedSprite2D.bob2.connect(cutscene_end)
 	$player.bob.connect(start)
 	
@@ -23,8 +24,11 @@ func end_game():
 	
 func cutscene_end():
 	$debris.cut = 1
+	$"spikes ;3".cut = 1
+	$player.cut=1
 	$cutscene/Sprite2D.visible = false
 
 func start():
 	$debris.start = 1
+	$"spikes ;3".start = 1
 	#$damage.start += 1

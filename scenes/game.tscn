@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cdag1xqssypo" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://xmobrxl1vqug" path="res://assets/background.png" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cmivq30p50sn3" path="res://scenes/damage.tscn" id="4_lbhrr"]
+[ext_resource type="Script" uid="uid://brx3kb6ggfxw" path="res://scenes/decor.gd" id="5_264po"]
+[ext_resource type="Texture2D" uid="uid://cawnabf1tm8nh" path="res://assets/spikes(colonthree).png" id="5_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://vy2cm3aprf08" path="res://assets/end.png" id="5_vtaks"]
 [ext_resource type="Texture2D" uid="uid://ccvncbr846kug" path="res://assets/blue.png" id="6_p57ef"]
 [ext_resource type="Script" uid="uid://4luq7gt0m5uo" path="res://scenes/endscreen.gd" id="7_u5sy4"]
@@ -17,6 +19,7 @@
 [ext_resource type="Script" uid="uid://m0dtcjatojhy" path="res://scenes/cutscene.gd" id="14_1kice"]
 [ext_resource type="Texture2D" uid="uid://b7miigxtts5c4" path="res://assets/cutscene/frame3.png" id="14_rysoc"]
 [ext_resource type="Script" uid="uid://crj0yw2q88o2d" path="res://scenes/fade.gd" id="16_5newe"]
+[ext_resource type="Script" uid="uid://d523sst2b7mq" path="res://scenes/spikes_;3.gd" id="20_1kice"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dtx53"]
 distance = -3.0
@@ -61,6 +64,9 @@ animations = [{
 "speed": 0.4
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_dtx53"]
+radius = 9.055386
+
 [node name="game" type="Node2D" unique_id=478730700]
 script = ExtResource("1_iywne")
 
@@ -94,6 +100,80 @@ z_index = -4
 position = Vector2(0.99999994, -11.999998)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_lnu2h")
+
+[node name="decor" type="Sprite2D" parent="background" unique_id=2075719452]
+position = Vector2(-606.6666, 343.33334)
+rotation = -1.3718607
+scale = Vector2(0.35880345, 0.36437917)
+texture = ExtResource("9_ca42v")
+script = ExtResource("5_264po")
+
+[node name="Sprite2D3" type="Sprite2D" parent="background/decor" unique_id=1349352624]
+position = Vector2(570.98773, 2788.9106)
+rotation = 0.9121127
+scale = Vector2(1.1852641, 1.1703278)
+texture = ExtResource("5_ssvqc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="background/decor" unique_id=748916807]
+position = Vector2(244.76807, 1565.8506)
+rotation = 0.20405747
+scale = Vector2(0.76994205, 0.6066963)
+texture = ExtResource("9_ca42v")
+
+[node name="Sprite2D4" type="Sprite2D" parent="background/decor" unique_id=1627728353]
+position = Vector2(13.362671, 389.2926)
+rotation = 2.3144612
+scale = Vector2(1.1413648, 1.4836591)
+skew = -0.368042
+texture = ExtResource("5_ssvqc")
+
+[node name="Sprite2D7" type="Sprite2D" parent="background/decor" unique_id=214419478]
+position = Vector2(828.9829, 3282.0251)
+rotation = 1.7328523
+scale = Vector2(1.3794211, 1.2568785)
+texture = ExtResource("9_ca42v")
+
+[node name="Sprite2D" type="Sprite2D" parent="background/decor" unique_id=1675664806]
+position = Vector2(12.086239, 268.66617)
+rotation = -0.3807079
+scale = Vector2(1.1299769, 0.78285074)
+skew = -0.806008
+texture = ExtResource("9_ca42v")
+
+[node name="Sprite2D5" type="Sprite2D" parent="background/decor" unique_id=2064015146]
+position = Vector2(244.4033, 1332.6227)
+rotation = 0.82941794
+texture = ExtResource("5_ssvqc")
+
+[node name="Sprite2D6" type="Sprite2D" parent="background/decor" unique_id=221494879]
+position = Vector2(642.5178, 3091.9998)
+rotation = 2.1993277
+scale = Vector2(1.4319776, 1.6042237)
+texture = ExtResource("5_ssvqc")
+
+[node name="Sprite2D8" type="Sprite2D" parent="background/decor" unique_id=1944846918]
+position = Vector2(70.56962, 853.86957)
+rotation = 1.470545
+scale = Vector2(1.0986481, 0.6192235)
+texture = ExtResource("9_ca42v")
+
+[node name="Sprite2D11" type="Sprite2D" parent="background/decor" unique_id=1013182260]
+position = Vector2(365.86945, 2111.0637)
+rotation = -1.09571
+scale = Vector2(1.0986482, 0.90102136)
+texture = ExtResource("9_ca42v")
+
+[node name="Sprite2D10" type="Sprite2D" parent="background/decor" unique_id=194862093]
+position = Vector2(439.01648, 2283.1838)
+rotation = 1.0152643
+scale = Vector2(0.45962283, 0.4045418)
+texture = ExtResource("9_ca42v")
+
+[node name="Sprite2D9" type="Sprite2D" parent="background/decor" unique_id=660001541]
+position = Vector2(442.36136, 2370.965)
+rotation = 1.5372798
+scale = Vector2(0.46863133, 0.5305072)
+texture = ExtResource("5_ssvqc")
 
 [node name="damage" parent="." unique_id=74082055 instance=ExtResource("4_lbhrr")]
 
@@ -143,3 +223,17 @@ script = ExtResource("14_1kice")
 z_index = -1
 texture = ExtResource("6_p57ef")
 script = ExtResource("16_5newe")
+
+[node name="spikes ;3" type="CharacterBody2D" parent="." unique_id=675098006]
+script = ExtResource("20_1kice")
+
+[node name="Sprite2D" type="Sprite2D" parent="spikes ;3" unique_id=1286106552]
+position = Vector2(-104.375, -90.99999)
+scale = Vector2(0.113509744, 0.12500006)
+texture = ExtResource("5_ssvqc")
+
+[node name="damage" parent="spikes ;3" unique_id=2032753938 instance=ExtResource("4_lbhrr")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes ;3/damage" unique_id=648701339]
+position = Vector2(-104, -90)
+shape = SubResource("CircleShape2D_dtx53")
