@@ -5,15 +5,9 @@ var cut = 0
 var start = 0
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+
 	velocity += get_gravity() * delta * 0.2
-
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-
 	velocity.x = move_toward(velocity.x, 0, SPEED)
-
 	move_and_slide()
 	
 	if(position.y > 1000):

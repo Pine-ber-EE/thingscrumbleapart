@@ -1,10 +1,8 @@
 extends Node2D
 
-
 var timer = 0.0
 var active = 0
 var active2 = 1
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,11 +11,6 @@ func _ready() -> void:
 	$"spikes ;3"/damage.bob.connect(end_game)
 	$cutscene/AnimatedSprite2D.bob2.connect(cutscene_end)
 	$player.bob.connect(start)
-	
-	
-	
-	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -46,4 +39,3 @@ func start():
 	$debris.start = 1
 	$"spikes ;3".start = 1
 	active = 1
-	#$damage.start += 1

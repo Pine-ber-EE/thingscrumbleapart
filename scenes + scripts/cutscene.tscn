@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://b6i6t4yxstbxx"]
 
 [ext_resource type="Texture2D" uid="uid://ildk5416c3j2" path="res://assets/blue2.png" id="1_3ptll"]
-[ext_resource type="Script" uid="uid://m0dtcjatojhy" path="res://scenes/cutscene.gd" id="1_a320b"]
+[ext_resource type="Script" uid="uid://m0dtcjatojhy" path="res://scenes + scripts/cutscene.gd" id="1_a320b"]
 [ext_resource type="Texture2D" uid="uid://dpiyqwyur4evc" path="res://assets/cutscene/frame0.png" id="1_bb0yx"]
 [ext_resource type="Texture2D" uid="uid://ccvncbr846kug" path="res://assets/blue.png" id="2_0sipp"]
 [ext_resource type="Texture2D" uid="uid://dv202qot0y0nt" path="res://assets/cutscene/frame1.png" id="2_3ptll"]
-[ext_resource type="Script" uid="uid://crj0yw2q88o2d" path="res://scenes/fade.gd" id="3_0sipp"]
 [ext_resource type="Texture2D" uid="uid://b38n64xbmqlfa" path="res://assets/cutscene/frame2.png" id="3_d18fx"]
 [ext_resource type="Texture2D" uid="uid://b7miigxtts5c4" path="res://assets/cutscene/frame3.png" id="5_d18fx"]
 
@@ -35,6 +34,10 @@ animations = [{
 "speed": 0.4
 }]
 
+[sub_resource type="GDScript" id="GDScript_1kice"]
+script/source = "
+"
+
 [node name="cutscene" type="Node2D" unique_id=1270152204]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2022119903]
@@ -47,4 +50,4 @@ script = ExtResource("1_a320b")
 visible = false
 z_index = -1
 texture = ExtResource("2_0sipp")
-script = ExtResource("3_0sipp")
+script = SubResource("GDScript_1kice")

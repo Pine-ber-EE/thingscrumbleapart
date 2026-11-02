@@ -8,12 +8,8 @@ var timer = 0.0
 func _physics_process(delta: float) -> void:
 	if(start == 1):
 		timer += delta
-	# Add the gravity.
+
 	velocity += get_gravity() * delta * 0.85
-
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 
 	velocity.x = move_toward(velocity.x, 0, SPEED)
 

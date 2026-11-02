@@ -1,6 +1,5 @@
 extends Sprite2D
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	modulate.a = 0.8
@@ -15,9 +14,3 @@ func _ready() -> void:
 	$Sprite2D9.modulate.a = 0.8
 	$Sprite2D10.modulate.a = 0.8
 	$Sprite2D11.modulate.a = 0.8
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

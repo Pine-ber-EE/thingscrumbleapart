@@ -1,26 +1,25 @@
 [gd_scene format=3 uid="uid://cmathr2hqide5"]
 
-[ext_resource type="Script" uid="uid://dipw4hfjuh1ri" path="res://scenes/game.gd" id="1_iywne"]
-[ext_resource type="PackedScene" uid="uid://cdag1xqssypo" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://dipw4hfjuh1ri" path="res://scenes + scripts/game.gd" id="1_iywne"]
+[ext_resource type="PackedScene" uid="uid://cdag1xqssypo" path="res://scenes + scripts/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://xmobrxl1vqug" path="res://assets/background.png" id="3_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://cmivq30p50sn3" path="res://scenes/damage.tscn" id="4_lbhrr"]
-[ext_resource type="Script" uid="uid://brx3kb6ggfxw" path="res://scenes/decor.gd" id="5_264po"]
+[ext_resource type="PackedScene" uid="uid://cmivq30p50sn3" path="res://scenes + scripts/damage.tscn" id="4_lbhrr"]
+[ext_resource type="Script" uid="uid://brx3kb6ggfxw" path="res://scenes + scripts/decor.gd" id="5_264po"]
 [ext_resource type="Texture2D" uid="uid://cawnabf1tm8nh" path="res://assets/spikes(colonthree).png" id="5_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://vy2cm3aprf08" path="res://assets/end.png" id="5_vtaks"]
 [ext_resource type="Texture2D" uid="uid://ccvncbr846kug" path="res://assets/blue.png" id="6_p57ef"]
-[ext_resource type="Script" uid="uid://4luq7gt0m5uo" path="res://scenes/endscreen.gd" id="7_u5sy4"]
+[ext_resource type="Script" uid="uid://4luq7gt0m5uo" path="res://scenes + scripts/endscreen.gd" id="7_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://c6t5w1rdqliwv" path="res://assets/pressstart.png" id="8_gee14"]
 [ext_resource type="Texture2D" uid="uid://ccc8jsxivrnth" path="res://assets/obstacle1.png" id="9_ca42v"]
-[ext_resource type="Script" uid="uid://ct132hygx4ngd" path="res://scenes/debris.gd" id="9_vtaks"]
+[ext_resource type="Script" uid="uid://ct132hygx4ngd" path="res://scenes + scripts/debris.gd" id="9_vtaks"]
 [ext_resource type="Texture2D" uid="uid://ildk5416c3j2" path="res://assets/blue2.png" id="10_ca42v"]
 [ext_resource type="Texture2D" uid="uid://dpiyqwyur4evc" path="res://assets/cutscene/frame0.png" id="11_rysoc"]
 [ext_resource type="Texture2D" uid="uid://dv202qot0y0nt" path="res://assets/cutscene/frame1.png" id="12_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://b38n64xbmqlfa" path="res://assets/cutscene/frame2.png" id="13_264po"]
-[ext_resource type="Script" uid="uid://m0dtcjatojhy" path="res://scenes/cutscene.gd" id="14_1kice"]
+[ext_resource type="Script" uid="uid://m0dtcjatojhy" path="res://scenes + scripts/cutscene.gd" id="14_1kice"]
 [ext_resource type="Texture2D" uid="uid://b7miigxtts5c4" path="res://assets/cutscene/frame3.png" id="14_rysoc"]
-[ext_resource type="Script" uid="uid://crj0yw2q88o2d" path="res://scenes/fade.gd" id="16_5newe"]
-[ext_resource type="Script" uid="uid://d523sst2b7mq" path="res://scenes/spikes_;3.gd" id="20_1kice"]
-[ext_resource type="PackedScene" uid="uid://cgmhfdiyhd4lu" path="res://scenes/score.tscn" id="21_5newe"]
+[ext_resource type="Script" uid="uid://d523sst2b7mq" path="res://scenes + scripts/spikes_;3.gd" id="20_1kice"]
+[ext_resource type="PackedScene" uid="uid://cgmhfdiyhd4lu" path="res://scenes + scripts/score.tscn" id="21_5newe"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dtx53"]
 distance = -3.0
@@ -64,6 +63,8 @@ animations = [{
 "name": &"default",
 "speed": 0.4
 }]
+
+[sub_resource type="GDScript" id="GDScript_1kice"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dtx53"]
 radius = 9.055386
@@ -223,7 +224,7 @@ script = ExtResource("14_1kice")
 [node name="Sprite2D" type="Sprite2D" parent="cutscene" unique_id=2118102783]
 z_index = -1
 texture = ExtResource("6_p57ef")
-script = ExtResource("16_5newe")
+script = SubResource("GDScript_1kice")
 
 [node name="spikes ;3" type="CharacterBody2D" parent="." unique_id=675098006]
 script = ExtResource("20_1kice")
