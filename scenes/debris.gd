@@ -6,7 +6,7 @@ var start = 0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	velocity += get_gravity() * delta
+	velocity += get_gravity() * delta * 0.2
 
 
 	# Get the input direction and handle the movement/deceleration.

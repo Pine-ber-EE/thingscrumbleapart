@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cgmhfdiyhd4lu"]
+
+[ext_resource type="Script" uid="uid://c4xo87v6cicb6" path="res://score.gd" id="1_8juob"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8juob"]
+font_size = 10
+
+[node name="score" type="Node2D" unique_id=1943494908]
+script = ExtResource("1_8juob")
+
+[node name="Label" type="Label" parent="." unique_id=542958143]
+offset_left = -176.0
+offset_top = -109.0
+offset_right = -133.0
+offset_bottom = -86.0
+label_settings = SubResource("LabelSettings_8juob")
