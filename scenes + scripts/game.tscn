@@ -118,11 +118,11 @@ scale = Vector2(0.35880345, 0.36437917)
 texture = ExtResource("9_ca42v")
 script = ExtResource("5_264po")
 
-[node name="Sprite2D3" type="Sprite2D" parent="background/decor" unique_id=1349352624]
-position = Vector2(570.98773, 2788.9106)
-rotation = 0.9121127
-scale = Vector2(1.1852641, 1.1703278)
-texture = ExtResource("5_ssvqc")
+[node name="Sprite2D12" type="Sprite2D" parent="background/decor" unique_id=316627575]
+position = Vector2(195.92639, 1790.1833)
+rotation = -1.6571238
+scale = Vector2(1.0986482, 0.9010215)
+texture = ExtResource("9_ca42v")
 
 [node name="Sprite2D2" type="Sprite2D" parent="background/decor" unique_id=748916807]
 position = Vector2(244.76807, 1565.8506)
@@ -161,6 +161,12 @@ rotation = 2.1993277
 scale = Vector2(1.4319776, 1.6042237)
 texture = ExtResource("5_ssvqc")
 
+[node name="Sprite2D3" type="Sprite2D" parent="background/decor" unique_id=1349352624]
+position = Vector2(569.2249, 2826.589)
+rotation = 0.91211265
+scale = Vector2(1.1852641, 1.1703279)
+texture = ExtResource("5_ssvqc")
+
 [node name="Sprite2D8" type="Sprite2D" parent="background/decor" unique_id=1944846918]
 position = Vector2(70.56962, 853.86957)
 rotation = 1.470545
@@ -168,7 +174,7 @@ scale = Vector2(1.0986481, 0.6192235)
 texture = ExtResource("9_ca42v")
 
 [node name="Sprite2D11" type="Sprite2D" parent="background/decor" unique_id=1013182260]
-position = Vector2(365.86945, 2111.0637)
+position = Vector2(398.69806, 2132.5427)
 rotation = -1.09571
 scale = Vector2(1.0986482, 0.90102136)
 texture = ExtResource("9_ca42v")

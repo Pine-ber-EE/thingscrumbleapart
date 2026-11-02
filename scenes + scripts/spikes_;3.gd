@@ -12,7 +12,7 @@ func _physics_process(delta: float) -> void:
 	velocity += get_gravity() * delta * 0.5
 
 	move_and_slide()
-	
+	velocity.x =0
 	if(position.y > 1000):
 		if(cut == 1):
 			if(start == 1):

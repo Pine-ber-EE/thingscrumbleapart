@@ -27,6 +27,7 @@ func _process(delta: float) -> void:
 	
 func end_game():
 	$endscreen.visible = true
+	$score/Label.label_settings.font_size=40
 	active2 = 0
 	
 func cutscene_end():
