@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://cawnabf1tm8nh" path="res://assets/spikes(colonthree).png" id="5_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://vy2cm3aprf08" path="res://assets/end.png" id="5_vtaks"]
 [ext_resource type="Texture2D" uid="uid://ccvncbr846kug" path="res://assets/blue.png" id="6_p57ef"]
+[ext_resource type="Texture2D" uid="uid://ca4hheuvugl66" path="res://assets/stars.png" id="7_1k7bo"]
 [ext_resource type="Script" uid="uid://4luq7gt0m5uo" path="res://scenes + scripts/endscreen.gd" id="7_u5sy4"]
+[ext_resource type="Script" uid="uid://x2vap43v7vgm" path="res://scenes + scripts/stars.gd" id="8_0uc5v"]
 [ext_resource type="Texture2D" uid="uid://c6t5w1rdqliwv" path="res://assets/pressstart.png" id="8_gee14"]
 [ext_resource type="Texture2D" uid="uid://ccc8jsxivrnth" path="res://assets/obstacle1.png" id="9_ca42v"]
 [ext_resource type="Script" uid="uid://ct132hygx4ngd" path="res://scenes + scripts/debris.gd" id="9_vtaks"]
@@ -177,6 +179,10 @@ rotation = 1.5372798
 scale = Vector2(0.46863133, 0.5305072)
 texture = ExtResource("5_ssvqc")
 
+[node name="stars" type="Sprite2D" parent="background" unique_id=2095908097]
+texture = ExtResource("7_1k7bo")
+script = ExtResource("8_0uc5v")
+
 [node name="damage" parent="." unique_id=74082055 instance=ExtResource("4_lbhrr")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="damage" unique_id=1117646196]
@@ -192,6 +198,7 @@ texture = ExtResource("5_vtaks")
 script = ExtResource("7_u5sy4")
 
 [node name="pressspace" type="Sprite2D" parent="." unique_id=62613485]
+visible = false
 position = Vector2(-3.0000005, -57)
 scale = Vector2(0.19495414, 0.18484041)
 texture = ExtResource("8_gee14")
@@ -212,6 +219,7 @@ position = Vector2(6, -101)
 shape = SubResource("RectangleShape2D_dtx53")
 
 [node name="cutscene" type="Node2D" parent="." unique_id=1270152204]
+visible = false
 z_index = 8
 position = Vector2(0, -12)
 

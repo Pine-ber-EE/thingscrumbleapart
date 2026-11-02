@@ -6,6 +6,7 @@ var active2 = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$cutscene.visible = true
 	$damage.bob.connect(end_game)
 	$debris/damage.bob.connect(end_game)
 	$"spikes ;3"/damage.bob.connect(end_game)
@@ -25,7 +26,6 @@ func _process(delta: float) -> void:
 		$pressspace.visible = false
 	
 func end_game():
-	print("hello")
 	$endscreen.visible = true
 	active2 = 0
 	
