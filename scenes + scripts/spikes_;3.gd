@@ -8,10 +8,8 @@ var timer = 0.0
 func _physics_process(delta: float) -> void:
 	if(start == 1):
 		timer += delta
-
+	rotate(deg_to_rad(45)*delta)
 	velocity += get_gravity() * delta * 0.5
-
-	velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
 	
