@@ -1,10 +1,14 @@
 extends Node2D
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$damage.bob.connect(end_game)
 	$debris/damage.bob.connect(end_game)
+	$cutscene/AnimatedSprite2D.bob2.connect(cutscene_end)
+	$player.bob.connect(start)
+	
+	
+	
 	pass # Replace with function body.
 
 
@@ -16,3 +20,9 @@ func _process(delta: float) -> void:
 func end_game():
 	print("hello")
 	$endscreen.visible = true
+	
+func cutscene_end():
+	$debris.cut = 1
+
+func start():
+	$damage.start=1

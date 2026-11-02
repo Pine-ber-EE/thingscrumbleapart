@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 150.0
+var cut = 0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -15,8 +16,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	if(position.y > 1000):
-		velocity.y=0
-		respawn()
+		if(cut == 1):
+			velocity.y=0
+			respawn()
 	
 func respawn():
 	position.y=-50

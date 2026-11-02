@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+signal bob
 var jumps = 0
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
@@ -7,6 +8,7 @@ const JUMP_VELOCITY = -300.0
 func _physics_process(delta: float) -> void:
 	if (jumps == 0):
 		modulate.a = 0.5
+		emit_signal("bob")
 	else:
 		modulate.a = 1
 	# Add the gravity.

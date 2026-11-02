@@ -36,7 +36,6 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2022119903]
 scale = Vector2(0.2950819, 0.295082)
 sprite_frames = SubResource("SpriteFrames_dpuov")
-autoplay = "default"
 frame_progress = 0.5392333
 script = ExtResource("1_a320b")
 
