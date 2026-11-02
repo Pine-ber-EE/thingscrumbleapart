@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dipw4hfjuh1ri" path="res://scenes + scripts/game.gd" id="1_iywne"]
 [ext_resource type="PackedScene" uid="uid://cdag1xqssypo" path="res://scenes + scripts/player.tscn" id="1_uwrxv"]
-[ext_resource type="Texture2D" uid="uid://xmobrxl1vqug" path="res://assets/background.png" id="3_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://cigu1nsce8ala" path="res://assets/sky.png" id="3_1k7bo"]
 [ext_resource type="PackedScene" uid="uid://cmivq30p50sn3" path="res://scenes + scripts/damage.tscn" id="4_lbhrr"]
 [ext_resource type="Script" uid="uid://brx3kb6ggfxw" path="res://scenes + scripts/decor.gd" id="5_264po"]
 [ext_resource type="Texture2D" uid="uid://cawnabf1tm8nh" path="res://assets/spikes(colonthree).png" id="5_ssvqc"]
@@ -103,7 +103,7 @@ shape = SubResource("WorldBoundaryShape2D_slfft")
 z_index = -4
 position = Vector2(0.99999994, -11.999998)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("3_lnu2h")
+texture = ExtResource("3_1k7bo")
 
 [node name="decor" type="Sprite2D" parent="background" unique_id=2075719452]
 position = Vector2(-606.6666, 343.33334)

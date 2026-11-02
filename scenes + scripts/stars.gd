@@ -10,7 +10,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	timer += delta
-	var temp = fmod(timer,2)/2
+	var temp = fmod(timer,5)/5
 	if temp > 0.5:
 		temp = 1-temp
 	modulate.a = temp
