@@ -8,9 +8,9 @@ const JUMP_VELOCITY = -300.0
 func _physics_process(delta: float) -> void:
 	if (jumps == 0):
 		modulate.a = 0.5
-		emit_signal("bob")
 	else:
 		modulate.a = 1
+		emit_signal("bob")
 	# Add the gravity.
 	if not is_on_floor():
 		if not (jumps == 0):

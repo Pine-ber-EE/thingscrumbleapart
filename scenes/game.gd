@@ -15,7 +15,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if not $player.jumps==0:
-		$pressspace.visible = false;
+		$pressspace.visible = false
 	
 func end_game():
 	print("hello")
@@ -23,6 +23,8 @@ func end_game():
 	
 func cutscene_end():
 	$debris.cut = 1
+	$cutscene/Sprite2D.visible = false
 
 func start():
-	$damage.start=1
+	$debris.start = 1
+	#$damage.start += 1

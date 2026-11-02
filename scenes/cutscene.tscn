@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dv202qot0y0nt" path="res://assets/cutscene/frame1.png" id="2_3ptll"]
 [ext_resource type="Script" uid="uid://crj0yw2q88o2d" path="res://scenes/fade.gd" id="3_0sipp"]
 [ext_resource type="Texture2D" uid="uid://b38n64xbmqlfa" path="res://assets/cutscene/frame2.png" id="3_d18fx"]
+[ext_resource type="Texture2D" uid="uid://b7miigxtts5c4" path="res://assets/cutscene/frame3.png" id="5_d18fx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dpuov"]
 animations = [{
@@ -22,6 +23,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_d18fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_d18fx")
 }, {
 "duration": 1.0,
 "texture": ExtResource("1_3ptll")

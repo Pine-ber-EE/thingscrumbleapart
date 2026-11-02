@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 150.0
 var cut = 0
+var start = 0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -17,9 +18,13 @@ func _physics_process(delta: float) -> void:
 	
 	if(position.y > 1000):
 		if(cut == 1):
-			velocity.y=0
-			respawn()
+			if(start == 1):
+				velocity.y=0
+				respawn()
 	
 func respawn():
+	rotation = 0
 	position.y=-50
-	position.x = randi_range(-180,220)
+	position.x = 5#randi_range(-180,220)
+	#rotate(deg_to_rad(randi_range(-40, 50)))
+	position.y=-100

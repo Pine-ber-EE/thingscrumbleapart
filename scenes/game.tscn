@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dv202qot0y0nt" path="res://assets/cutscene/frame1.png" id="12_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://b38n64xbmqlfa" path="res://assets/cutscene/frame2.png" id="13_264po"]
 [ext_resource type="Script" uid="uid://m0dtcjatojhy" path="res://scenes/cutscene.gd" id="14_1kice"]
+[ext_resource type="Texture2D" uid="uid://b7miigxtts5c4" path="res://assets/cutscene/frame3.png" id="14_rysoc"]
 [ext_resource type="Script" uid="uid://crj0yw2q88o2d" path="res://scenes/fade.gd" id="16_5newe"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dtx53"]
@@ -48,6 +49,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("13_264po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rysoc")
 }, {
 "duration": 1.0,
 "texture": ExtResource("10_ca42v")
@@ -115,14 +119,14 @@ position = Vector2(86, -9)
 script = ExtResource("9_vtaks")
 
 [node name="Sprite2D" type="Sprite2D" parent="debris" unique_id=205574985]
-position = Vector2(-15, -44.000004)
+position = Vector2(6, -100)
 scale = Vector2(0.070011124, 0.0972863)
 texture = ExtResource("9_ca42v")
 
 [node name="damage" parent="debris" unique_id=1588641404 instance=ExtResource("4_lbhrr")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="debris/damage" unique_id=1891317242]
-position = Vector2(-15, -43)
+position = Vector2(6, -101)
 shape = SubResource("RectangleShape2D_dtx53")
 
 [node name="cutscene" type="Node2D" parent="." unique_id=1270152204]
@@ -132,12 +136,10 @@ position = Vector2(0, -12)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="cutscene" unique_id=2022119903]
 scale = Vector2(0.2950819, 0.295082)
 sprite_frames = SubResource("SpriteFrames_dpuov")
-autoplay = "default"
 frame_progress = 0.5392333
 script = ExtResource("14_1kice")
 
 [node name="Sprite2D" type="Sprite2D" parent="cutscene" unique_id=2118102783]
-visible = false
 z_index = -1
 texture = ExtResource("6_p57ef")
 script = ExtResource("16_5newe")
