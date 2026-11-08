@@ -1,12 +1,17 @@
 # things crumble apart
 This was my first godot game, so a ton of time was spent figuring things out, debugging, and watching yt tutorials.
 
-## instructions
+## how it looks
+!(screenshot of the game)[screenshot.png]
+
+## instructions (how to play)
+Head on over to the itch.io page [pinebery.itch.io/crumble](https://pinebery.itch.io/crumble) to play the game.
+
 WASD and arrow keys both work for movement. Press space to flap.
 
 Dodge the falling debris! Make sure not to get caught in the sharp piles of debris on the floor either!
 
-Press S to skip the cutscene if needed
+Press S to skip the cutscene if needed.
 
 ## story
 Watch the cutscene!
@@ -32,5 +37,7 @@ Oct 31 2026 - Started development for the game
 
 ## credits
 Art by me :>> (once again)
+
 Art software: kleki (once again again)
+
 Game engine: godot (new!)
