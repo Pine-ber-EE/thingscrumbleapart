@@ -11,6 +11,8 @@ Press S to skip the cutscene if needed
 ## story
 Watch the cutscene!
 
+There isn't a very definite reason or inspiration for this story other than wanting to create an interesting backstory for why the game makes you dodge falling architecture.
+
 ## notes
 This game is a work in progess which means I will be adding new features/updates soon :)
 
@@ -19,6 +21,14 @@ The bug character is somewhat inspired by the Lumaflies from the Hollow Knight s
 I spedran making this game in basically a day so the code might not be the most well written...
 
 Have fun!!
+
+## devlog
+
+Nov 8 2026 - Added more story, obstacles, and polish
+
+Nov 1 2026 - Uploaded the game to itch.io
+
+Oct 31 2026 - Started development for the game
 
 ## credits
 Art by me :>> (once again)

@@ -39,7 +39,7 @@ normal = Vector2(-1, 0)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tebq6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dtx53"]
-size = Vector2(10.375, 37.5)
+size = Vector2(10.375, 34.745476)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dtx53"]
 font = ExtResource("20_0uc5v")
@@ -215,7 +215,7 @@ scale = Vector2(0.19495414, 0.18484041)
 texture = ExtResource("8_gee14")
 
 [node name="debris" type="CharacterBody2D" parent="." unique_id=540075149]
-position = Vector2(86, -9)
+position = Vector2(87, -9)
 script = ExtResource("9_vtaks")
 
 [node name="Sprite2D" type="Sprite2D" parent="debris" unique_id=205574985]
@@ -226,7 +226,9 @@ texture = ExtResource("9_ca42v")
 [node name="damage" parent="debris" unique_id=1588641404 instance=ExtResource("4_lbhrr")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="debris/damage" unique_id=1891317242]
-position = Vector2(6, -101)
+position = Vector2(6, -100)
+rotation = -0.023782678
+scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_dtx53")
 
 [node name="cutscene" type="Node2D" parent="." unique_id=1270152204]
