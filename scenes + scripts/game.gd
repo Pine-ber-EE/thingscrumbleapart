@@ -12,6 +12,7 @@ func _ready() -> void:
 	$"spikes ;3"/damage.damage.connect(end_game)
 	$cutscene/AnimatedSprite2D.bob2.connect(cutscene_end)
 	$player.bob.connect(start)
+	$endscreen.restart.connect(restart_game)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -41,3 +42,17 @@ func start():
 	$debris.start = 1
 	$"spikes ;3".start = 1
 	active = 1
+	
+func restart_game():
+	#print("you gotta reload for now")
+	cutscene_end()
+	$debris.start = 0
+	$"spikes ;3".start = 0
+	$endscreen.visible = false
+	$player.jumps=0
+	$score/Label.label_settings.font_size=20
+	$score.score=0
+	active2 = 1
+	active=0
+	$player.position.x=0
+	$player.position.y=-13

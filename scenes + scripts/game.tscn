@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cmivq30p50sn3" path="res://scenes + scripts/damage.tscn" id="4_lbhrr"]
 [ext_resource type="Script" uid="uid://brx3kb6ggfxw" path="res://scenes + scripts/decor.gd" id="5_264po"]
 [ext_resource type="Texture2D" uid="uid://cawnabf1tm8nh" path="res://assets/spikes(colonthree).png" id="5_ssvqc"]
-[ext_resource type="Texture2D" uid="uid://vy2cm3aprf08" path="res://assets/end.png" id="5_vtaks"]
 [ext_resource type="Texture2D" uid="uid://ccvncbr846kug" path="res://assets/blue.png" id="6_p57ef"]
 [ext_resource type="Texture2D" uid="uid://ca4hheuvugl66" path="res://assets/stars.png" id="7_1k7bo"]
 [ext_resource type="Script" uid="uid://4luq7gt0m5uo" path="res://scenes + scripts/endscreen.gd" id="7_u5sy4"]
@@ -19,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dv202qot0y0nt" path="res://assets/cutscene/frame1.png" id="12_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://b38n64xbmqlfa" path="res://assets/cutscene/frame2.png" id="13_264po"]
 [ext_resource type="Script" uid="uid://m0dtcjatojhy" path="res://scenes + scripts/cutscene.gd" id="14_1kice"]
-[ext_resource type="Texture2D" uid="uid://c6uwjw6e5y0at" path="res://assets/cutscene/frame3d.png" id="14_rysoc"]
+[ext_resource type="Texture2D" uid="uid://c6uwjw6e5y0at" path="res://assets/cutscene/frame3.png" id="14_rysoc"]
 [ext_resource type="FontFile" uid="uid://vbohpsiv0fre" path="res://assets/JellyBounce.ttf" id="20_0uc5v"]
 [ext_resource type="Script" uid="uid://d523sst2b7mq" path="res://scenes + scripts/spikes_;3.gd" id="20_1kice"]
 [ext_resource type="Texture2D" uid="uid://do5ukdymqqeey" path="res://assets/cutscene/frame4.png" id="20_378lu"]
@@ -39,6 +38,9 @@ normal = Vector2(1, 0)
 normal = Vector2(-1, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tebq6"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w8fgr"]
+load_path = "res://.godot/imported/end.png-da72b277fdcdbc9d786ea87eedbaff6a.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dtx53"]
 size = Vector2(10.375, 34.745476)
@@ -214,7 +216,7 @@ visible = false
 z_index = 3
 position = Vector2(0, -9)
 scale = Vector2(0.32786882, 0.32786885)
-texture = ExtResource("5_vtaks")
+texture = SubResource("CompressedTexture2D_w8fgr")
 script = ExtResource("7_u5sy4")
 
 [node name="pressspace" type="Sprite2D" parent="." unique_id=62613485]

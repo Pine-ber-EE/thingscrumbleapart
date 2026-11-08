@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ccvncbr846kug" path="res://assets/blue.png" id="2_0sipp"]
 [ext_resource type="Texture2D" uid="uid://dv202qot0y0nt" path="res://assets/cutscene/frame1.png" id="2_3ptll"]
 [ext_resource type="Texture2D" uid="uid://b38n64xbmqlfa" path="res://assets/cutscene/frame2.png" id="3_d18fx"]
-[ext_resource type="Texture2D" uid="uid://c6uwjw6e5y0at" path="res://assets/cutscene/frame3d.png" id="5_d18fx"]
+[ext_resource type="Texture2D" uid="uid://c6uwjw6e5y0at" path="res://assets/cutscene/frame3.png" id="5_d18fx"]
 [ext_resource type="Texture2D" uid="uid://do5ukdymqqeey" path="res://assets/cutscene/frame4.png" id="6_ugd85"]
 [ext_resource type="Texture2D" uid="uid://c60uop7fv3shu" path="res://assets/cutscene/frame5.png" id="7_rivh4"]
 
