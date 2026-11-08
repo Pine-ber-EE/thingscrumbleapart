@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 	
 func end_game():
 	active2 = 0
-	if $score.score < 111:#111:
+	if $score.score < 30:#111:
 		$endscreen.visible = true
 		$score/Label.label_settings.font_size=40
 	else:
@@ -64,6 +64,7 @@ func restart_game():
 	$"spikes ;3".start = 0
 	$endscreen.visible = false
 	$player.jumps=0
+	$player.flap = 1
 	$score/Label.label_settings.font_size=20
 	$score.score=0
 	active2 = 1

@@ -43,5 +43,5 @@ func _physics_process(delta: float) -> void:
 	if flap >= 1:
 		$AnimatedSprite2D.play()
 	else:
-		if $AnimatedSprite2D.frame == 5:
+		if $AnimatedSprite2D.frame == 1:
 			$AnimatedSprite2D.pause()
