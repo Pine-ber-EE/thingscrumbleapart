@@ -246,7 +246,7 @@ script = ExtResource("8_0uc5v")
 [node name="damage" parent="." unique_id=74082055 instance=ExtResource("4_lbhrr")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="damage" unique_id=1117646196]
-position = Vector2(1, 83)
+position = Vector2(1, 88)
 shape = SubResource("WorldBoundaryShape2D_tebq6")
 
 [node name="endscreen" type="Sprite2D" parent="." unique_id=1365837861]

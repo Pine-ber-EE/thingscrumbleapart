@@ -6,6 +6,7 @@ var active2 = 1
 var active3 = 0
 var shield = 1
 var inv = 0
+var shaketimer = 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,6 +23,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	timer += delta
+	shaketimer += delta*20
 	inv -= delta*5
 	if(timer>1):
 		timer-=1
@@ -35,8 +37,20 @@ func _process(delta: float) -> void:
 		$shield.visible = false
 	else:
 		$shield.visible = true
+	if(shaketimer<1):
+		$Camera2D.position = Vector2(3, -8)
+	else: if(shaketimer<2):
+		$Camera2D.position = Vector2(-2, -13)
+	else: if(shaketimer<3):
+		$Camera2D.position = Vector2(-1, -9)
+	else: if(shaketimer<4):
+		$Camera2D.position = Vector2(0, -11)
+	else: if(shaketimer<5):
+		$Camera2D.position = Vector2(0, -12)
 	
 func end_game():
+	if active2 == 1:
+		camera_shake()
 	if shield == 0:
 		if inv < 0:
 			active2 = 0
@@ -54,7 +68,12 @@ func end_game():
 					$score/Label.visible = false
 	else:
 		shield -= 1
-		inv = 5
+		if $player.position.y > 90:
+			end_game()
+		else:
+			inv = 5
+		
+	
 	
 func cutscene_end():
 	$debris.cut = 1
@@ -82,3 +101,7 @@ func restart_game():
 	active=0
 	$player.position.x=0
 	$player.position.y=-13
+	shield = 1
+
+func camera_shake():
+	shaketimer = 0
