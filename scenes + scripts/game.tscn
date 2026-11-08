@@ -19,10 +19,12 @@
 [ext_resource type="Texture2D" uid="uid://dv202qot0y0nt" path="res://assets/cutscene/frame1.png" id="12_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://b38n64xbmqlfa" path="res://assets/cutscene/frame2.png" id="13_264po"]
 [ext_resource type="Script" uid="uid://m0dtcjatojhy" path="res://scenes + scripts/cutscene.gd" id="14_1kice"]
-[ext_resource type="Texture2D" uid="uid://b7miigxtts5c4" path="res://assets/cutscene/frame3.png" id="14_rysoc"]
+[ext_resource type="Texture2D" uid="uid://c6uwjw6e5y0at" path="res://assets/cutscene/frame3d.png" id="14_rysoc"]
 [ext_resource type="FontFile" uid="uid://vbohpsiv0fre" path="res://assets/JellyBounce.ttf" id="20_0uc5v"]
 [ext_resource type="Script" uid="uid://d523sst2b7mq" path="res://scenes + scripts/spikes_;3.gd" id="20_1kice"]
+[ext_resource type="Texture2D" uid="uid://do5ukdymqqeey" path="res://assets/cutscene/frame4.png" id="20_378lu"]
 [ext_resource type="PackedScene" uid="uid://cgmhfdiyhd4lu" path="res://scenes + scripts/score.tscn" id="21_5newe"]
+[ext_resource type="Texture2D" uid="uid://c60uop7fv3shu" path="res://assets/cutscene/frame5.png" id="21_bhtvv"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dtx53"]
 distance = -3.0
@@ -63,6 +65,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("14_rysoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_378lu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_bhtvv")
 }, {
 "duration": 1.0,
 "texture": ExtResource("10_ca42v")
