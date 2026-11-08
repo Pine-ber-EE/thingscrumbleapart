@@ -2,7 +2,7 @@
 This was my first godot game, so a ton of time was spent figuring things out, debugging, and watching yt tutorials.
 
 ## how it looks
-![screenshot of the game](screenshot.png)
+![screenshot of the game](assets/screenshot.png)
 
 ## instructions (how to play)
 Head on over to the itch.io page [pinebery.itch.io/crumble](https://pinebery.itch.io/crumble) to play the game.
