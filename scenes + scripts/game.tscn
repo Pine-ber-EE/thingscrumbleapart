@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://b7v251ypdrqvu" path="res://assets/endcut/endframe0.png" id="26_6i7y0"]
 [ext_resource type="Script" uid="uid://clfuxt0b1a7ya" path="res://scenes + scripts/endcut.gd" id="26_bhtvv"]
 [ext_resource type="Texture2D" uid="uid://dhwq080pcxedx" path="res://assets/endcut/endframe1.png" id="27_ldnmi"]
+[ext_resource type="Texture2D" uid="uid://bouy0rqowqb1w" path="res://assets/sheild.png" id="29_6i7y0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dtx53"]
 distance = -3.0
@@ -324,6 +325,7 @@ z_index = 4
 [node name="endcut" type="Node2D" parent="." unique_id=1031113218]
 
 [node name="endcut_ani" type="AnimatedSprite2D" parent="endcut" unique_id=1133048456]
+visible = false
 z_index = 2
 position = Vector2(11.028691, -14.999992)
 scale = Vector2(0.3142076, 0.31420764)
@@ -344,3 +346,8 @@ vertical_alignment = 1
 [node name="endcut_backg" type="Sprite2D" parent="endcut" unique_id=836622009]
 visible = false
 texture = ExtResource("10_ca42v")
+
+[node name="shield" type="Sprite2D" parent="." unique_id=371720288]
+position = Vector2(-174.00002, -87.00001)
+scale = Vector2(0.034077033, 0.03085819)
+texture = ExtResource("29_6i7y0")

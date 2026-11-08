@@ -4,6 +4,8 @@ var timer = 0.0
 var active = 0
 var active2 = 1
 var active3 = 0
+var shield = 1
+var inv = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,6 +22,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	timer += delta
+	inv -= delta*5
 	if(timer>1):
 		timer-=1
 		if(active == 1):
@@ -28,22 +31,30 @@ func _process(delta: float) -> void:
 	
 	if not $player.jumps==0:
 		$pressspace.visible = false
+	if shield == 0:
+		$shield.visible = false
+	else:
+		$shield.visible = true
 	
 func end_game():
-	active2 = 0
-	if $score.score < 30:#111:
-		$endscreen.visible = true
-		$score/Label.label_settings.font_size=40
+	if shield == 0:
+		if inv < 0:
+			active2 = 0
+			if $score.score < 30:#111:
+				$endscreen.visible = true
+				$score/Label.label_settings.font_size=40
+			else:
+				if active3==0:
+					active3 = 1
+					$endcut/endcut_ani.visible = true
+					$endcut/endcut_backg.visible = true
+					$endcut/endcut_ani.frame = 0
+					$endcut/endcut_ani.timer = 0
+					$endcut/endcut_ani.score = $score.score
+					$score/Label.visible = false
 	else:
-		if active3==0:
-			active3 = 1
-			$endcut/endcut_ani.visible = true
-			$endcut/endcut_backg.visible = true
-			$endcut/endcut_ani.frame = 0
-			$endcut/endcut_ani.timer = 0
-			$endcut/endcut_ani.score = $score.score
-			$score/Label.visible = false
-		
+		shield -= 1
+		inv = 5
 	
 func cutscene_end():
 	$debris.cut = 1

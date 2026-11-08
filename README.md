@@ -29,6 +29,8 @@ Have fun!!
 
 ## devlog
 
+Nov 9 2026 - End cutscene and win condition added
+
 Nov 8 2026 - Added more story, obstacles, and polish
 
 Nov 1 2026 - Uploaded the game to itch.io
