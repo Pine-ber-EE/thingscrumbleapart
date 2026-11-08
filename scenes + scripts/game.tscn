@@ -332,10 +332,10 @@ script = ExtResource("26_bhtvv")
 
 [node name="Label" type="Label" parent="endcut/endcut_ani" unique_id=495454812]
 z_index = 3
-offset_left = -136.94348
-offset_top = 25.460846
-offset_right = 64.05652
-offset_bottom = 85.460846
+offset_left = -146.49118
+offset_top = 19.095627
+offset_right = 54.50882
+offset_bottom = 79.09563
 text = "score: 0"
 label_settings = SubResource("LabelSettings_1bkr4")
 horizontal_alignment = 1
