@@ -5,10 +5,18 @@
 [ext_resource type="Texture2D" uid="uid://dpiyqwyur4evc" path="res://assets/cutscene/frame0.png" id="1_bb0yx"]
 [ext_resource type="Texture2D" uid="uid://ccvncbr846kug" path="res://assets/blue.png" id="2_0sipp"]
 [ext_resource type="Texture2D" uid="uid://dv202qot0y0nt" path="res://assets/cutscene/frame1.png" id="2_3ptll"]
-[ext_resource type="Texture2D" uid="uid://b38n64xbmqlfa" path="res://assets/cutscene/frame2.png" id="3_d18fx"]
-[ext_resource type="Texture2D" uid="uid://c6uwjw6e5y0at" path="res://assets/cutscene/frame3.png" id="5_d18fx"]
-[ext_resource type="Texture2D" uid="uid://do5ukdymqqeey" path="res://assets/cutscene/frame4.png" id="6_ugd85"]
-[ext_resource type="Texture2D" uid="uid://c60uop7fv3shu" path="res://assets/cutscene/frame5.png" id="7_rivh4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6i7y0"]
+load_path = "res://.godot/imported/frame2.png-e986eb43999884f35038e0a738b3fa60.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ldnmi"]
+load_path = "res://.godot/imported/frame3.png-8b5c702de6ba31e5016c68f7fd9d9ae8.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b0net"]
+load_path = "res://.godot/imported/frame4.png-f4d49d2de22d58846e6e48f948a62276.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q7v7n"]
+load_path = "res://.godot/imported/frame5.png-dc11f4df6b4307bc180fab1d433d6bc4.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dpuov"]
 animations = [{
@@ -26,16 +34,16 @@ animations = [{
 "texture": ExtResource("2_3ptll")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_d18fx")
+"texture": SubResource("CompressedTexture2D_6i7y0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_d18fx")
+"texture": SubResource("CompressedTexture2D_ldnmi")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_ugd85")
+"texture": SubResource("CompressedTexture2D_b0net")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_rivh4")
+"texture": SubResource("CompressedTexture2D_q7v7n")
 }, {
 "duration": 1.0,
 "texture": ExtResource("1_3ptll")

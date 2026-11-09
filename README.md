@@ -31,11 +31,15 @@ Have fun!!
 
 ## devlog
 
+Nov 8 2026 - Added particle effects and shakescreen
+
 Nov 8 2026 - End cutscene and win condition added
 
 Nov 8 2026 - Added more story, obstacles, and polish
 
 Nov 1 2026 - Uploaded the game to itch.io
+
+Nov 1 2026 - Made the game with basic mechanics and a cutscene + endscreen
 
 Oct 31 2026 - Started development for the game
 

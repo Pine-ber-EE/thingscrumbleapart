@@ -3,6 +3,8 @@ extends AnimatedSprite2D
 const test = "hello"
 var timer = 0
 signal bob2
+signal shake
+var cutscene = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,3 +21,6 @@ func _process(delta: float) -> void:
 	if frame == 8:
 		emit_signal("bob2")
 		visible = false
+		cutscene =0
+	if 5<=frame && cutscene == 1 && visible == true:
+		emit_signal("shake")

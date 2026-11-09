@@ -26,11 +26,13 @@ func _physics_process(delta: float) -> void:
 					timer = 0
 	
 func respawn():
-	if active2 == 1:
-		visible = true
-		$Sprite2D.visible = true
 	rotation = 0
 	position.y=-50
 	position.x = randi_range(-180,220)
 	rotate(deg_to_rad(randi_range(-50, 40)))
 	position.y=-100
+	if active2 == 1:
+		visible = true
+		$Sprite2D.visible = true
+		$CPUParticles2D.visible = true
+		$CPUParticles2D.speed_scale = 3.0

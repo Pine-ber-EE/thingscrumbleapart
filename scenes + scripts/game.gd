@@ -17,6 +17,7 @@ func _ready() -> void:
 	
 	$star/heal.heal.connect(gain_shield)
 	$cutscene/AnimatedSprite2D.bob2.connect(cutscene_end)
+	$cutscene/AnimatedSprite2D.shake.connect(cut_shake)
 	
 	$player.bob.connect(start)
 	$endscreen.restart.connect(restart_game)
@@ -27,7 +28,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if shield == 1:
+	if shield == 1 && $player.jumps >0:
 		$player/particles.visible = true
 	else:
 		$player/particles.visible = false
@@ -123,8 +124,18 @@ func restart_game():
 
 func camera_shake():
 	shaketimer = 0
-	
+
+func cut_shake():
+	if shaketimer>6:
+		camera_shake()
+	if(shaketimer<1):
+		$Camera2D.position = Vector2(randi_range(-1, 1), randi_range(-11, -11))
+	else: if(shaketimer<4):
+		$Camera2D.position = Vector2(randi_range(-1, 1), randi_range(-11, -11))
+
 func gain_shield():
 	$star/Sprite2D.visible = false
+	$star/CPUParticles2D.visible = false
+	$star/CPUParticles2D.speed_scale = 0.0
 	if !(shield == 1):
 		shield = 1
