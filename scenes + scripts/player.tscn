@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bkbpfhdd701kg" path="res://assets/boogAnimation.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cftpnrwojjnmx" path="res://scenes + scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://cbrw1guw6iao1" path="res://assets/particle.png" id="3_l3dd6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3vyb7"]
 atlas = ExtResource("1_3vyb7")
@@ -56,6 +57,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_dtx53"]
 radius = 6.0
 
+[sub_resource type="Gradient" id="Gradient_l3dd6"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1994481336]
 script = ExtResource("1_g2els")
 
@@ -71,3 +75,21 @@ frame_progress = 0.8022603
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=131755390]
 position = Vector2(0, -11)
 shape = SubResource("CircleShape2D_dtx53")
+
+[node name="particles" type="CPUParticles2D" parent="." unique_id=1471144815]
+z_index = -1
+position = Vector2(0, -10)
+texture = ExtResource("3_l3dd6")
+lifetime = 6.0
+speed_scale = 19.4
+explosiveness = 0.07
+randomness = 0.43
+fixed_fps = 16
+emission_shape = 1
+emission_sphere_radius = 17.69
+spread = 167.61
+gravity = Vector2(0, 0)
+initial_velocity_max = 2.0
+scale_amount_min = 0.1
+scale_amount_max = 0.2
+color_ramp = SubResource("Gradient_l3dd6")

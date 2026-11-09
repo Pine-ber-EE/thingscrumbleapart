@@ -27,6 +27,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if shield == 1:
+		$player/particles.visible = true
+	else:
+		$player/particles.visible = false
 	$star.shield = shield
 	timer += delta
 	shaketimer += delta*20
