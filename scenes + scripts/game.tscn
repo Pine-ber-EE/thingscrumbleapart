@@ -370,7 +370,7 @@ texture = ExtResource("30_ldnmi")
 script = ExtResource("32_q7v7n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="star/heal" unique_id=1045320716]
-position = Vector2(-44, -156)
+position = Vector2(-43, -157)
 shape = SubResource("CircleShape2D_1bkr4")
 
 [connection signal="area_entered" from="star/heal" to="." method="_on_heal_area_entered"]
