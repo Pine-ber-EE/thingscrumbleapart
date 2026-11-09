@@ -5,8 +5,9 @@ var cut = 0
 var start = 0
 var timer = 0.0
 var shield = 0
+var active2 = 0
 
-func _physics_process(delta: float) -> void:
+func _physics_process(delta: float) -> void:	
 	if(start == 1):
 		timer += delta
 	#print(shield)
@@ -25,8 +26,9 @@ func _physics_process(delta: float) -> void:
 					timer = 0
 	
 func respawn():
-	visible = true
-	$Sprite2D.visible = true
+	if active2 == 1:
+		visible = true
+		$Sprite2D.visible = true
 	rotation = 0
 	position.y=-50
 	position.x = randi_range(-180,220)

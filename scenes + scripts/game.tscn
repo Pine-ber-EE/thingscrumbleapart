@@ -21,10 +21,12 @@
 [ext_resource type="FontFile" uid="uid://vbohpsiv0fre" path="res://assets/JellyBounce.ttf" id="20_0uc5v"]
 [ext_resource type="Script" uid="uid://d523sst2b7mq" path="res://scenes + scripts/spikes_;3.gd" id="20_1kice"]
 [ext_resource type="PackedScene" uid="uid://cgmhfdiyhd4lu" path="res://scenes + scripts/score.tscn" id="21_5newe"]
+[ext_resource type="Texture2D" uid="uid://csonpi7o7f4x5" path="res://assets/particle2.png" id="21_ldnmi"]
 [ext_resource type="Texture2D" uid="uid://b7v251ypdrqvu" path="res://assets/endcut/endframe0.png" id="26_6i7y0"]
 [ext_resource type="Script" uid="uid://clfuxt0b1a7ya" path="res://scenes + scripts/endcut.gd" id="26_bhtvv"]
 [ext_resource type="Texture2D" uid="uid://dhwq080pcxedx" path="res://assets/endcut/endframe1.png" id="27_ldnmi"]
 [ext_resource type="Texture2D" uid="uid://bouy0rqowqb1w" path="res://assets/sheild.png" id="29_6i7y0"]
+[ext_resource type="Texture2D" uid="uid://cbrw1guw6iao1" path="res://assets/particle.png" id="29_ldnmi"]
 [ext_resource type="Script" uid="uid://b1k1dxk26lo3q" path="res://scenes + scripts/star.gd" id="30_b0net"]
 [ext_resource type="Texture2D" uid="uid://dggqnf7vi5h11" path="res://assets/heal.png" id="30_ldnmi"]
 [ext_resource type="Script" uid="uid://bslij10eseg7f" path="res://scenes + scripts/heal.gd" id="32_q7v7n"]
@@ -48,6 +50,9 @@ load_path = "res://.godot/imported/end.png-da72b277fdcdbc9d786ea87eedbaff6a.ctex
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dtx53"]
 size = Vector2(10.375, 34.745476)
+
+[sub_resource type="Gradient" id="Gradient_1bkr4"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dtx53"]
 font = ExtResource("20_0uc5v")
@@ -106,6 +111,10 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_dtx53"]
 radius = 9.055386
 
+[sub_resource type="Gradient" id="Gradient_dtx53"]
+offsets = PackedFloat32Array(0, 0.5714286)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ey5dt"]
 load_path = "res://.godot/imported/endframe3.png-4d5528addb364270e42a722a74fdcfeb.ctex"
 
@@ -138,6 +147,9 @@ font_size = 60
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1bkr4"]
 radius = 23.0
+
+[sub_resource type="Gradient" id="Gradient_6i7y0"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 0.9882353, 0)
 
 [node name="game" type="Node2D" unique_id=478730700]
 script = ExtResource("1_iywne")
@@ -293,6 +305,17 @@ rotation = -0.023782678
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_dtx53")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="debris" unique_id=571426281]
+position = Vector2(6, -99)
+texture = ExtResource("21_ldnmi")
+speed_scale = 2.0
+emission_shape = 3
+emission_rect_extents = Vector2(10, 20)
+gravity = Vector2(0, 0)
+scale_amount_min = 0.05
+scale_amount_max = 0.2
+color_ramp = SubResource("Gradient_1bkr4")
+
 [node name="cutscene" type="Node2D" parent="." unique_id=1270152204]
 visible = false
 z_index = 8
@@ -332,6 +355,16 @@ texture = ExtResource("5_ssvqc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes ;3/damage" unique_id=648701339]
 position = Vector2(-104, -90)
 shape = SubResource("CircleShape2D_dtx53")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="spikes ;3" unique_id=1443001635]
+position = Vector2(-104, -90)
+texture = ExtResource("21_ldnmi")
+emission_shape = 1
+emission_sphere_radius = 18.95
+gravity = Vector2(0, 0)
+scale_amount_min = 0.05
+scale_amount_max = 0.2
+color_ramp = SubResource("Gradient_dtx53")
 
 [node name="score" parent="." unique_id=1943494908 instance=ExtResource("21_5newe")]
 z_index = 4
@@ -380,6 +413,20 @@ script = ExtResource("32_q7v7n")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="star/heal" unique_id=1045320716]
 position = Vector2(-44, -157)
 shape = SubResource("CircleShape2D_1bkr4")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="star" unique_id=1050972258]
+z_index = -1
+position = Vector2(-44, -156)
+texture = ExtResource("29_ldnmi")
+speed_scale = 3.0
+emission_shape = 1
+emission_sphere_radius = 24.92
+gravity = Vector2(0, 0)
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+scale_amount_min = 0.3
+scale_amount_max = 0.4
+color_ramp = SubResource("Gradient_6i7y0")
 
 [connection signal="area_entered" from="star/heal" to="." method="_on_heal_area_entered"]
 [connection signal="body_entered" from="star/heal" to="star/heal" method="_on_body_entered"]

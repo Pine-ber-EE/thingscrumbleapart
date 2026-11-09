@@ -44,4 +44,6 @@ Art by me :>> (once again)
 
 Art software: kleki (once again again)
 
+Font: JellyBounce by Pinisi Art
+
 Game engine: godot (new!)

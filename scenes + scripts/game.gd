@@ -31,7 +31,10 @@ func _process(delta: float) -> void:
 		$player/particles.visible = true
 	else:
 		$player/particles.visible = false
+	
 	$star.shield = shield
+	$star.active2 = active2
+	
 	timer += delta
 	shaketimer += delta*20
 	inv -= delta*5
