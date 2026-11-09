@@ -14,14 +14,20 @@ func _ready() -> void:
 	$damage.damage.connect(end_game)
 	$debris/damage.damage.connect(end_game)
 	$"spikes ;3"/damage.damage.connect(end_game)
+	
+	$star/heal.heal.connect(gain_shield)
 	$cutscene/AnimatedSprite2D.bob2.connect(cutscene_end)
+	
 	$player.bob.connect(start)
 	$endscreen.restart.connect(restart_game)
+	$endcut/endcut_ani.restart.connect(restart_game)
+	
 	$endcut/endcut_ani.visible = false
 	$endcut/endcut_backg.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	$star.shield = shield
 	timer += delta
 	shaketimer += delta*20
 	inv -= delta*5
@@ -79,25 +85,31 @@ func cutscene_end():
 	$debris.cut = 1
 	$"spikes ;3".cut = 1
 	$player.cut=1
+	$star.cut = 1
 	$cutscene/Sprite2D.visible = false
 	$cutscene/Label.visible = false
 
 func start():
 	$debris.start = 1
 	$"spikes ;3".start = 1
+	$star.start = 1
 	active = 1
 	
 func restart_game():
-	#print("you gotta reload for now")
+	print("you gotta reload for now")
 	cutscene_end()
 	$debris.start = 0
 	$"spikes ;3".start = 0
 	$endscreen.visible = false
+	$endcut/endcut_ani.visible = false
+	$endcut/endcut_backg.visible = false
 	$player.jumps=0
 	$player.flap = 1
 	$score/Label.label_settings.font_size=20
+	$score/Label.visible = true
 	$score.score=0
 	active2 = 1
+	active3 = 0
 	active=0
 	$player.position.x=0
 	$player.position.y=-13
@@ -105,3 +117,8 @@ func restart_game():
 
 func camera_shake():
 	shaketimer = 0
+	
+func gain_shield():
+	$star/Sprite2D.visible = false
+	if !(shield == 1):
+		shield = 1

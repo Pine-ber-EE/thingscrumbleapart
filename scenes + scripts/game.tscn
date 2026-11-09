@@ -29,6 +29,9 @@
 [ext_resource type="Script" uid="uid://clfuxt0b1a7ya" path="res://scenes + scripts/endcut.gd" id="26_bhtvv"]
 [ext_resource type="Texture2D" uid="uid://dhwq080pcxedx" path="res://assets/endcut/endframe1.png" id="27_ldnmi"]
 [ext_resource type="Texture2D" uid="uid://bouy0rqowqb1w" path="res://assets/sheild.png" id="29_6i7y0"]
+[ext_resource type="Script" uid="uid://b1k1dxk26lo3q" path="res://scenes + scripts/star.gd" id="30_b0net"]
+[ext_resource type="Texture2D" uid="uid://dggqnf7vi5h11" path="res://assets/heal.png" id="30_ldnmi"]
+[ext_resource type="Script" uid="uid://bslij10eseg7f" path="res://scenes + scripts/heal.gd" id="32_q7v7n"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dtx53"]
 distance = -3.0
@@ -124,6 +127,9 @@ animations = [{
 [sub_resource type="LabelSettings" id="LabelSettings_1bkr4"]
 font = ExtResource("20_0uc5v")
 font_size = 60
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bkr4"]
+radius = 23.0
 
 [node name="game" type="Node2D" unique_id=478730700]
 script = ExtResource("1_iywne")
@@ -351,3 +357,21 @@ texture = ExtResource("10_ca42v")
 position = Vector2(-174.00002, -87.00001)
 scale = Vector2(0.034077033, 0.03085819)
 texture = ExtResource("29_6i7y0")
+
+[node name="star" type="CharacterBody2D" parent="." unique_id=1632133122]
+script = ExtResource("30_b0net")
+
+[node name="Sprite2D" type="Sprite2D" parent="star" unique_id=255251937]
+position = Vector2(-43, -158.00003)
+scale = Vector2(0.14386792, 0.14386794)
+texture = ExtResource("30_ldnmi")
+
+[node name="heal" type="Area2D" parent="star" unique_id=98253876]
+script = ExtResource("32_q7v7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="star/heal" unique_id=1045320716]
+position = Vector2(-44, -156)
+shape = SubResource("CircleShape2D_1bkr4")
+
+[connection signal="area_entered" from="star/heal" to="." method="_on_heal_area_entered"]
+[connection signal="body_entered" from="star/heal" to="star/heal" method="_on_body_entered"]
