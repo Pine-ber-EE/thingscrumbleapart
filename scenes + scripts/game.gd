@@ -96,7 +96,6 @@ func start():
 	active = 1
 	
 func restart_game():
-	print("you gotta reload for now")
 	cutscene_end()
 	$debris.start = 0
 	$"spikes ;3".start = 0

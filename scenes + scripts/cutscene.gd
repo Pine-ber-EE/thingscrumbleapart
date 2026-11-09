@@ -16,6 +16,6 @@ func _process(delta: float) -> void:
 	timer += delta * 0.4
 	frame = round(timer)
 	modulate.a = fmod(timer+0.5,1)+0.3
-	if frame == 7:
+	if frame == 8:
 		emit_signal("bob2")
 		visible = false

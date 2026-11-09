@@ -20,7 +20,6 @@ func _physics_process(delta: float) -> void:
 			if(start == 1):
 				if(timer > randi_range(1,2)):
 					if (shield == 0):
-						print(velocity.y + delta)
 						velocity.y=0
 						respawn()
 					timer = 0
